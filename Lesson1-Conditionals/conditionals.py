@@ -21,13 +21,13 @@ else:
 age_input = input("Enter your age: ")
 if age_input:
     age = age_input
-    if 0 <= age >= 12:
+    if 0 <= age <= 12:
         print("You are a child")
-    elif 13 <= age >= 19:
+    elif 13 <= age <= 19:
         print("You are a teenager")
-    elif 20 <= age >= 64:
+    elif 20 <= age <= 64:
         print("You are an adult")
-    elif age <= 65:
+    elif age >= 65:
         print("You are a senior")
     else:
         print("Please input a valid age")
@@ -37,7 +37,20 @@ else:
 # ========================================
 # SECTION 3: STUDENT STATUS CHECKER
 # ========================================
+age = 17
+gpa = 3.8
+has_license = True
 
+can_drive = age >= 16 and has_license
+honor_roll = gpa >= 3.5
+eligible = can_drive and honor_roll and age >= 17
+
+print(f"Can drive: {can_drive}")
+print(f"Honor roll: {honor_roll}")
+print(f"Eligible: {eligible}")
+
+if eligible:
+    print("Scholarship Candidate")
 
 # ========================================
 # SECTION 4: GRADE VALIDATOR CHALLENGE
