@@ -24,3 +24,9 @@ while True:
 # Find first divsor
 n = 15
 divisor = 2
+
+while divisor < n:
+    if n % divisor == 0:
+        break # Found
+    divisor += 1
+print(divisor)
